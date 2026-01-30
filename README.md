@@ -41,7 +41,7 @@ The app displays a list of movies with posters, popularity scores, release years
 
 
   
-  ![Simulator Screen Recording - iPhone 17 Pro - 2026-01-26 at 15 04 07](https://github.com/user-attachments/assets/59f140a6-029c-433c-a54b-d0e884b3e49d)
+![Simulator Screen Recording - iPhone 17 Pro - 2026-01-29 at 16 47 53](https://github.com/user-attachments/assets/cc531dd5-2c30-4343-b79b-0054ee697ae1)
 
 
 
