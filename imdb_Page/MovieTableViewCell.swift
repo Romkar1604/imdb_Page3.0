@@ -32,7 +32,7 @@ class MovieTableViewCell: UITableViewCell {
         titleLabel?.textColor = .black
         titleLabel?.textAlignment = .right
         titleLabel?.translatesAutoresizingMaskIntoConstraints = false
-        contentView.addSubview(titleLabel!)
+
         
         /// year label
         yearLabel = UILabel()
@@ -40,7 +40,7 @@ class MovieTableViewCell: UITableViewCell {
         yearLabel?.textColor = .black
         yearLabel?.textAlignment = .left
         yearLabel?.translatesAutoresizingMaskIntoConstraints = false
-        contentView.addSubview(yearLabel!)
+
         
         ///popularity score
         popularityScoreLabel = UILabel()
@@ -48,19 +48,24 @@ class MovieTableViewCell: UITableViewCell {
         popularityScoreLabel?.textColor = .black
         popularityScoreLabel?.textAlignment = .left
         popularityScoreLabel?.translatesAutoresizingMaskIntoConstraints = false
-        contentView.addSubview(popularityScoreLabel!)
+
         
         /// poster image
         posterImageView = UIImageView()
         posterImageView?.contentMode = .scaleAspectFill
         posterImageView?.clipsToBounds = true
         posterImageView?.translatesAutoresizingMaskIntoConstraints = false
-        contentView.addSubview(posterImageView!)
         
         
 
         
         if let titleLabel = titleLabel, let yearLabel = yearLabel, let popularityScoreLabel = popularityScoreLabel, let posterImageView = posterImageView {
+            
+            contentView.addSubview(posterImageView)
+            contentView.addSubview(popularityScoreLabel)
+            contentView.addSubview(yearLabel)
+            contentView.addSubview(titleLabel)
+            
             NSLayoutConstraint.activate([
                 
                 // Poster
