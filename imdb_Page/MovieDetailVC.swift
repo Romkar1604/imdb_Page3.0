@@ -32,37 +32,43 @@ class MovieDetailViewController: UIViewController {
         posterImageView?.contentMode = .scaleAspectFill
         posterImageView?.clipsToBounds = true
         posterImageView?.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(posterImageView!)
+
 
         // Title
         titleLabel = UILabel()
         titleLabel?.font = UIFont.boldSystemFont(ofSize: 22)
         titleLabel?.numberOfLines = 0
         titleLabel?.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(titleLabel!)
+
 
         // Year
         yearLabel = UILabel()
         yearLabel?.font = UIFont.systemFont(ofSize: 16)
         yearLabel?.textColor = .darkGray
         yearLabel?.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(yearLabel!)
+
 
         // Popularity
         popularityScoreLabel = UILabel()
         popularityScoreLabel?.font = UIFont.systemFont(ofSize: 16)
         popularityScoreLabel?.textColor = .systemBlue
         popularityScoreLabel?.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(popularityScoreLabel!)
+
 
         // Overview
         overviewLabel = UILabel()
         overviewLabel?.font = UIFont.systemFont(ofSize: 16)
         overviewLabel?.numberOfLines = 0
         overviewLabel?.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(overviewLabel!)
+
 
         guard let posterImageView = posterImageView, let titleLabel = titleLabel, let yearLabel = yearLabel, let popularityScoreLabel = popularityScoreLabel, let overviewLabel = overviewLabel else { return }
+        
+        view.addSubview(posterImageView)
+        view.addSubview(overviewLabel)
+        view.addSubview(popularityScoreLabel)
+        view.addSubview(yearLabel)
+        view.addSubview(titleLabel)
 
         NSLayoutConstraint.activate([
 
